@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DASHBOARD DATA KO-AKADEMIK</title>
+    <style>
+        /* General body styling */
+        body {
+            background-color: white;
+            margin: 0; /* Removes default browser margin */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            text-align: center; /* Ensures text is centered */
+            min-height: 100vh; /* Ensures full height */
+        }
+
+        /* Header and Footer Navigation Bar Styling */
+        .nav-bar {
+            background-color: #005a9c; /* Blue background */
+            color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Home Button Styling */
+        .home-button img {
+            height: 40px;
+            cursor: pointer; /* Indicates clickable action */
+        }
+
+        /* Title Styling in the Header */
+        .nav-bar h2 {
+            margin: 0;
+            flex-grow: 1; /* Allows title to center in the nav bar */
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Iframe Styling for Content */
+        iframe {
+            margin: 20px 0; /* Adds spacing above and below the iframe */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #005a9c;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer img {
+            height: 50px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <div class="nav-bar">
+        <div class="home-button">
+            <a href="index.html">
+                <img src="home.png" alt="Home Button">
+            </a>
+        </div>
+        <h2>DASHBOARD DATA KO-AKADEMIK</h2>
+    </div>
+
+    <!-- Dashboard Iframe -->
+    <iframe title="1.DASHBOARD DATA KO-AKADEMIK" 
+            width="1250" 
+            height="465" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiMzBlODM1M2YtZmU0Zi00MTM4LThjMTItMGI2ZWU0ODQ0MjRkIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
+            frameborder="0" 
+            allowFullScreen="true">
+    </iframe>
+
+    <!-- Footer -->
+    <footer>
+        <img src="AT MUALLIM DAERAH ILMU PUTIH.png" alt="Muallim Footer Logo">
+    </footer>
+</body>
+</html>
