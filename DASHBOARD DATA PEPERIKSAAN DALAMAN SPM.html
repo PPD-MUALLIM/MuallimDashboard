@@ -3,18 +3,28 @@
 <head>
     <title>DASHBOARD DATA PEPERIKSAAN DALAMAN SPM</title>
     <style>
-        /* General body styling */
-        body {
-            background-color: white;
+        /* General styling */
+        * {
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            min-height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Header and Footer Navigation Bar Styling */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Header Navigation Bar Styling */
         .nav-bar {
             background-color: #005a9c;
             color: white;
@@ -39,7 +49,15 @@
             color: white;
         }
 
-        /* Iframe container */
+        /* Main Content Styling */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
         .iframe-container {
             width: 90%;
             max-width: 1250px;
@@ -64,6 +82,8 @@
             font-size: 14px;
             width: 100%;
             text-align: center;
+            position: sticky;
+            bottom: 0;
         }
 
         footer img {
@@ -123,12 +143,14 @@
         <h2>DASHBOARD DATA PEPERIKSAAN DALAMAN SPM</h2>
     </div>
 
-    <!-- Dashboard Iframe -->
-    <div class="iframe-container">
-        <iframe title="1.DASHBOARD DATA PEPERIKSAAN DALAMAN SPM" 
-                src="https://app.powerbi.com/view?r=eyJrIjoiOTA2NDMzMWYtNDhiYS00YTYzLWE2ZjEtYmU0ODE1MmNkMjRiIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
-                allowFullScreen="true">
-        </iframe>
+    <!-- Centered Body Content -->
+    <div class="content">
+        <div class="iframe-container">
+            <iframe title="1.DASHBOARD DATA PEPERIKSAAN DALAMAN SPM" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiOTA2NDMzMWYtNDhiYS00YTYzLWE2ZjEtYmU0ODE1MmNkMjRiIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
+                    allowFullScreen="true">
+            </iframe>
+        </div>
     </div>
 
     <!-- Footer -->
