@@ -8,7 +8,7 @@
         /* General Styles */
         body {
             margin: 0;
-            font-family: Lora, San-serif;
+            font-family: Lora;
             background-color: #f8f8f8;
             text-align: center;
         }
@@ -31,8 +31,8 @@
             font-size: 35px;
         }
 
-	header h2 {
-            margin: 0px;
+        header h2 {
+            margin: 0;
             font-size: 35px;
         }
 
@@ -53,9 +53,10 @@
         /* Card Container */
         .card-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	    grid-template-columns: 1fr 1fr;
             gap: 20px;
-            padding: 40px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -74,12 +75,12 @@
         }
 
         .card img {
-            width: 80px;
+            width: 60px;
             margin-bottom: 10px;
         }
 
         .card h3 {
-            font-size: 18px;
+            font-size: 16px;
             margin: 10px 0 0;
             font-weight: bold;
         }
@@ -93,10 +94,49 @@
             text-decoration: none;
         }
 
-        /* Logo */
-        .logo {
-            display: block;
-            margin: 0 auto 10px;
+        /* Responsive Header Font Sizes */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            header h2 {
+                font-size: 24px;
+            }
+
+            header img {
+                height: 80px;
+            }
+        }
+
+        /* Responsive Card Sizes */
+        @media (max-width: 768px) {
+            .card img {
+                width: 100px;
+            }
+
+            .card h3 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card img {
+                width: 100px;
+            }
+
+            .card h3 {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -106,7 +146,7 @@
     <header>
         <img src="LOGO PPD MUALLIM PUTIH-03.png" alt="PPD Muallim Logo" class="logo">
         <h1>MUALLIM</h1>
-	<h2>EDUCATION ANALYTICS</h2>
+        <h2>EDUCATION ANALYTICS</h2>
     </header>
 
     <!-- Card Section -->
@@ -118,7 +158,7 @@
         </a>
 
         <!-- Card 2: Clickable -->
-	<a href="DASHBOARD DATA KO-AKADEMIK.html" class="card">
+        <a href="DASHBOARD DATA KO-AKADEMIK.html" class="card">
             <img src="SPORT.png" alt="Ko-Akademik Dashboard">
             <h3>DASHBOARD DATA KO-AKADEMIK</h3>
         </a>
@@ -130,14 +170,14 @@
         </a>
 
         <!-- Card 4: Clickable -->
-	<a href="DASHBOARD DATA PROGRAM INTERVENSI.html" class="card">
+        <a href="DASHBOARD DATA PROGRAM INTERVENSI.html" class="card">
             <img src="MATH.png" alt="Literacy Dashboard">
             <h3>DASHBOARD DATA PROGRAM INTERVENSI LITERASI NUMERASI TAHUN 1</h3>
         </a>
 
-	    <!-- Card 5: Clickable -->
-	<a href="DASHBOARD KEHADIRAN MURID TINGKATAN 5.html" class="card">
-            <img src="GRAPH.png" alt="Literacy Dashboard">
+        <!-- Card 5: Clickable -->
+        <a href="DASHBOARD KEHADIRAN MURID TINGKATAN 5.html" class="card">
+            <img src="GRAPH.png" alt="Attendance Dashboard">
             <h3>DASHBOARD KEHADIRAN MURID TINGKATAN 5</h3>
         </a>
     </div>
