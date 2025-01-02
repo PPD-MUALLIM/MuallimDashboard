@@ -3,18 +3,27 @@
 <head>
     <title>DASHBOARD DATA KO-AKADEMIK</title>
     <style>
-        /* General body styling */
-        body {
-            background-color: white;
+        /* General styling */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: white;
             text-align: center;
-            min-height: 100vh;
         }
 
-        /* Header and Footer Navigation Bar Styling */
+        /* Fixed Header Navigation Bar Styling */
         .nav-bar {
             background-color: #005a9c;
             color: white;
@@ -24,6 +33,9 @@
             justify-content: space-between;
             padding: 10px 20px;
             box-sizing: border-box;
+            position: fixed; /* Fixed header */
+            top: 0; /* Stays at the top of the page */
+            z-index: 1000; /* Ensures it's always on top */
         }
 
         .home-button img {
@@ -39,7 +51,16 @@
             color: white;
         }
 
-        /* Iframe container */
+        /* Main Content Styling */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 70px; /* Prevent overlap with fixed header */
+        }
+
         .iframe-container {
             width: 90%;
             max-width: 1250px;
@@ -113,7 +134,7 @@
     </style>
 </head>
 <body>
-    <!-- Header Navigation Bar -->
+    <!-- Fixed Header Navigation Bar -->
     <div class="nav-bar">
         <div class="home-button">
             <a href="index.html">
@@ -123,12 +144,14 @@
         <h2>DASHBOARD DATA KO-AKADEMIK</h2>
     </div>
 
-    <!-- Dashboard Iframe -->
-    <div class="iframe-container">
-        <iframe title="1.DASHBOARD DATA KO-AKADEMIK" 
-                src="https://app.powerbi.com/view?r=eyJrIjoiMzBlODM1M2YtZmU0Zi00MTM4LThjMTItMGI2ZWU0ODQ0MjRkIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
-                allowFullScreen="true">
-        </iframe>
+    <!-- Centered Body Content -->
+    <div class="content">
+        <div class="iframe-container">
+            <iframe title="1.DASHBOARD DATA KO-AKADEMIK" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMzBlODM1M2YtZmU0Zi00MTM4LThjMTItMGI2ZWU0ODQ0MjRkIiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" 
+                    allowFullScreen="true">
+            </iframe>
+        </div>
     </div>
 
     <!-- Footer -->
